@@ -10,23 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_18_204227) do
-
-  create_table "stocks", force: :cascade do |t|
-    t.string "account_symbol"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_12_18_204123) do
 
   create_table "transactions", force: :cascade do |t|
-    t.string "shares_purchased"
-    t.string "purchased_price"
-    t.boolean "active"
+    t.float "purchased_price"
+    t.string "stock"
+    t.boolean "status"
     t.integer "user_id"
-    t.integer "stock_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["stock_id"], name: "index_transactions_on_stock_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
