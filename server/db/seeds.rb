@@ -18,4 +18,4 @@ user1=User.create(first_name: 'Hannah', last_name: 'Banana', email: 'hannah@exam
 user1=User.create(first_name: 'Meg', last_name: 'Memeg', email: 'memegyou@example.com', password: '0000')
 puts "There are now #{User.count} rows in the users table"
 
-Transaction.create(purchased_price: 312, stock:'Apple', status: true, user_id: 1)
+# Transaction.create(purchased_price: 312, stock:'Apple', stock_symbol:'AAPL',status: false, user_id: 1)
