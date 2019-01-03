@@ -12,10 +12,10 @@ User.destroy_all
 Transaction.destroy_all
 
 
-user1=User.create(first_name: 'Jordan', last_name: 'Laird', email: 'jordan@example.com', password: '1234')
-user1=User.create(first_name: 'Janu', last_name: 'Orega', email: 'janu@example.com', password: 'pass')
-user1=User.create(first_name: 'Hannah', last_name: 'Banana', email: 'hannah@example.com', password: "word")
-user1=User.create(first_name: 'Meg', last_name: 'Memeg', email: 'memegyou@example.com', password: '0000')
+User.create(first_name: 'Jordan', last_name: 'Laird', email: 'jordan@example.com', password: '1234')
+User.create(first_name: 'Janu', last_name: 'Orega', email: 'janu@example.com', password: 'pass')
+User.create(first_name: 'Hannah', last_name: 'Banana', email: 'hannah@example.com', password: "word")
+User.create(first_name: 'Meg', last_name: 'Memeg', email: 'memegyou@example.com', password: '0000')
 puts "There are now #{User.count} rows in the users table"
 
-# Transaction.create(purchased_price: 312, stock:'Apple', stock_symbol:'AAPL',status: false, user_id: 1)
+Transaction.create(purchased_price: 312, stock:'Apple', status: true, user_id: 1)
