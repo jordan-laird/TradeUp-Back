@@ -4,7 +4,6 @@ class Api::V1::TransactionsController < Api::V1::ApplicationController
     # skip_before_action :check_authentication, only: [ :index, :create ]
     
     def create
-        puts transaction_params
         transaction = Transaction.create(transaction_params)
         render json: transaction
     end
@@ -28,7 +27,7 @@ class Api::V1::TransactionsController < Api::V1::ApplicationController
     end
     
     def transaction_params
-        params.require(:transaction).permit(:shares_purchased, :purchased_price, :status, :user_id, :stock)
+        params.require(:transaction).permit(:shares_purchased, :purchased_price, :status, :user_id, :stock, :stock_symbol, :sold_price)
     end
     
     def define_current_transaction
