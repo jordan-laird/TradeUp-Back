@@ -28,7 +28,7 @@ class Api::V1::TransactionsController < Api::V1::ApplicationController
     end
     
     def transaction_params
-        params.require(:transaction).permit(:shares_purchased, :purchased_price, :status, :user_id, :stock)
+        params.require(:transaction).permit(:shares_purchased, :purchased_price, :status, :user_id, :stock, :stock_symbol)
     end
     
     def define_current_transaction
