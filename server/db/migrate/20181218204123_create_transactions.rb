@@ -6,6 +6,7 @@ class CreateTransactions < ActiveRecord::Migration[5.2]
       t.boolean :status
       t.belongs_to :user
       t.string :stock_symbol
+      t.float :sold_price
 
       t.timestamps
     end
